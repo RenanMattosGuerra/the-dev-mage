@@ -1,26 +1,51 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+  /* Colors */
+  --color-darktext: oklch(0.15 0.1 269);
+  --color-darktext-muted: oklch(0.4 0.1 269);
+  --color-lighttext: oklch(0.96 0.1 272);
+  --color-lighttext-muted: oklch(0.76 0.1 272);
+  --color-border: oklch(0.6 0.1 269);
+  --color-border-muted: oklch(0.7 0.1 269);
+  --color-primary: #061b5a;
+  --color-primary-light: #235ebc;
+  --color-secondary: #005243;
+  --color-secondary-light: #67baa6;
+  --color-shade1: #7a5ff8;
+  --color-shade2: #9f7fff;
+  --color-shade3: #c49fff;
+  --color-shade4: #e9c1ff;
+  --color-gold: #ffc04e;
+  --color-yellow: #f9f871;
+  --color-book-light: #592d18;
+  --color-book-dark: #351808;
+  --color-page: #fcecbf;
+  --color-gray: oklch(27.837% 0.03355 257.693 / 0.9);
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  /* Spacing */
+  --spacing-xs: 10px;
+  --spacing-sm: 14px;
+  --spacing-md: 18px;
+  --spacing-lg: 24px;
+  --spacing-xl: 32px;
+  --spacing-xxl: 48px;
+  --spacing-xxxl: 60px;
+
+  /* Spacing */
+  --text-size-sm: 12px;
+  --text-size-md: 16px;
+  --text-size-lg: 20px;
+  --text-size-xl: 28px;
+  --text-size-xxl: 36px;
+  --text-size-xxxl: 60px;
+
+  /* Fonts */
+  --font-title: "Jacquard 24", system-ui;
+  --font-heading: "Bitcount Grid Single";
+  --font-text: "Jersey 20";
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--color-gray);
 }

@@ -1,65 +1,155 @@
+"use client";
 import Image from "next/image";
+import { useState } from "react";
+import { useRouter } from "next/navigation";
 
 export default function Home() {
+  const [name, setName] = useState("");
+  const router = useRouter();
+
+  function handleStart() {
+    if (!name.trim()) {
+      alert("Type your character name.");
+      return;
+    }
+    localStorage.setItem("characterName", name);
+
+    router.push("/start");
+  }
+
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+    <main className="w-full lg:h-dvh min-h-dvh flex justify-evenly items-center lg:flex-row flex-col p-md lg:p-xxxl gap-xl">
+      <section className="lg:w-3/5 h-full w-full">
+        <figure>
+          <Image
+            src="/images/worldfeatures/bgacademyup.webp"
+            width={700}
+            height={700}
+            alt="Academy"
+            className="w-full lg:h-110 rounded-md"
+          ></Image>
+        </figure>
+        <section className="-mt-20 lg:-mt-80 backdrop-blur-xs lg:backdrop-blur-none">
+          <section className="flex lg:max-w-200 flex-col justify-center items-center lg:m-xl">
+            <h1 className="font-title text-size-xxl lg:text-size-xxxl text-lighttext text-shadow-primary-light text-shadow-xs text-center backdrop-blur-xs rounded-md">
+              The Dev Mage
+            </h1>
+            <section className="p-md bg-gray border-2 border-border text-justify rounded-md flex flex-col gap-sm backdrop-blur-xs">
+              <p className="font-heading text-size-md lg:text-size-xl text-lighttext-muted border-b-2 border-border text-center">
+                From Apprentice to Front-End Wizard
+              </p>
+              <article className="text-lighttext text-justify font-text xl:text-size-lg text-size-md indent-10">
+                Welcome to <ins>The Dev Mage</ins> — a browser-based,
+                interactive learning experience set in a fantasy realm where
+                code is magic and knowledge is power. <br />
+                <p>
+                  In this world, you are a young apprentice mage at the
+                  beginning of your journey.
+                </p>
+                <p>
+                  Each step of your adventure represents a core discipline of
+                  modern front-end development.
+                </p>
+                <p>
+                  You will master the structure of reality through{" "}
+                  <span className="text-lighttext-muted">HTML</span>, shape
+                  illusions with{" "}
+                  <span className="text-lighttext-muted">CSS</span>, harness
+                  logic using
+                  <span className="text-lighttext-muted"> JavaScript</span>, and
+                  bend dynamic interfaces to your will with
+                  <span className="text-lighttext-muted"> React</span>. Along
+                  the way, you will learn to communicate with distant realms
+                  through <span className="text-lighttext-muted">APIs</span> and
+                  craft meaningful, intuitive experiences through{" "}
+                  <span className="text-lighttext-muted">UX/UI</span> design.
+                </p>
+                <p>
+                  This is not just a game — it is a journey of growth,
+                  experimentation, and discovery.
+                </p>
+                <p>
+                  Your goal is clear: evolve from a novice spellcaster into a
+                  true
+                  <span className="text-lighttext-muted">
+                    {" "}
+                    Front-End Wizard.
+                  </span>
+                </p>
+                <p>Your training begins now.</p>
+              </article>
+            </section>
+          </section>
+        </section>
+      </section>
+      <section className="flex lg:w-fit w-full flex-col justify-evenly items-center text-justify p-sm bg-gray gap-lg lg:gap-0 border-2 border-border h-full rounded-md">
+        <section>
+          <form
+            className="flex flex-col justify-center items-center gap-md"
+            onSubmit={(e) => {
+              e.preventDefault();
+              handleStart();
+            }}
           >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
+            <label
+              htmlFor="name"
+              className="font-heading text-lighttext-muted text-size-xl"
+            >
+              Name your Mage
+            </label>
+            <input
+              type="text"
+              value={name}
+              onChange={(e) => setName(e.target.value)}
+              name="name"
+              id="name"
+              className="bg-lighttext focus-within:border-gold border-lighttext-muted p-1 font-text border-4 text-size-lg outline-0 text-center text-darktext rounded-md focus-within:scale-110 duration-200 transition-all"
+              placeholder="Character Name"
             />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
-      </main>
-    </div>
+          </form>
+        </section>
+        <section className="flex flex-col md:flex-row justify-evenly items-center w-full">
+          <figure className="flex lg:gap-xxl justify-center items-center">
+            <Image
+              src="/images/characters/novicemage.png"
+              alt="Novice Mage"
+              width={200}
+              height={200}
+              className="rotate-y-180"
+            ></Image>
+          </figure>
+
+          <figure>
+            <Image
+              src="/images/characters/bluewizard.png"
+              alt="Front-end Wizard"
+              width={200}
+              height={200}
+            ></Image>
+          </figure>
+        </section>
+        <button
+          onClick={handleStart}
+          type="submit"
+          className="group font-text text-size-xl lg:text-size-xxl pt-2 text-shadow-sm cursor-pointer text-gold transition-all duration-200 hover:scale-105 flex flex-col justify-center items-center"
+        >
+          <span>Begin your Journey</span>
+          <Image
+            src="/images/worldfeatures/closedbook.png"
+            alt="book"
+            width={105}
+            height={105}
+            className="group-hover:hidden"
+          ></Image>
+          <Image
+            src="/images/worldfeatures/openbook.png"
+            alt="book"
+            width={105}
+            height={105}
+            className="hidden group-hover:block"
+          ></Image>
+        </button>
+      </section>
+    </main>
   );
 }
