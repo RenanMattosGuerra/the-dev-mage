@@ -101,7 +101,7 @@ export default function PageFive() {
       <button
         type="button"
         onClick={handleCompleteLevel}
-        className="bg-darktext-muted font-heading text-lighttext p-sm transition-all duration-200 hover:scale-95 mt-sm rounded-md cursor-pointer border-2 border-darktext"
+        className="bg-darktext-muted font-heading text-lighttext p-xs xl:p-sm transition-all duration-200 hover:scale-95 mt-sm rounded-md cursor-pointer border-2 border-darktext text-size-md"
       >
         Next Level
       </button>

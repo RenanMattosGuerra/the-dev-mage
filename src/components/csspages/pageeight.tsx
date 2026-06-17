@@ -12,12 +12,12 @@ export default function PageEight() {
   }
 
   return (
-    <article className="flex flex-col justify-center items-center gap-md max-w-100 xl:max-w-400">
+    <article className="flex flex-col justify-center items-center gap-md">
       <h2 className="font-heading text-size-lg text-lighttext-muted">
         Code example
       </h2>
       <article className="flex flex-col justify-center items-center gap-md">
-        <code className="flex flex-col xl:flex-row justify-evenly items-start w-full text-size-md text-lighttext gap-md">
+        <code className="flex flex-col xl:flex-row justify-evenly items-start w-full text-size-sm xl:text-size-md text-lighttext gap-md">
           <section className="flex flex-col items-start justify-center gap-md">
             <h3 className="text-secondary-light text-size-lg">HTML</h3>
             &lt; section &gt; <br />
@@ -73,7 +73,7 @@ export default function PageEight() {
           </section>
         </code>
         <section className="flex flex-col xl:flex-row justify-between items-center xl:items-end w-full">
-          <section className="flex justify-around items-center w-100 bg-secondary-light p-2 rounded-md self-center">
+          <section className="flex justify-around items-center xl:w-1/2 w-full bg-secondary-light p-2 rounded-md self-center">
             <div className="flex justify-center items-center bg-yellow-200 text-size-md font-text rounded-full w-20 h-20 transition-all duration-200 hover:bg-green-300 border-4 border-white italic">
               <h1>Form One</h1>
             </div>
@@ -84,7 +84,7 @@ export default function PageEight() {
           <button
             type="button"
             onClick={handleCompleteLevel}
-            className="bg-darktext-muted font-heading text-lighttext p-sm transition-all duration-200 hover:scale-95 mt-sm rounded-md cursor-pointer border-2 border-darktext"
+            className="bg-darktext-muted font-heading text-lighttext p-xs xl:p-sm transition-all duration-200 hover:scale-95 mt-sm rounded-md cursor-pointer border-2 border-darktext text-size-md"
           >
             Next Level
           </button>
