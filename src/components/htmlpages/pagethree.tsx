@@ -4,7 +4,7 @@ export default function PageThree() {
       <h1 className="font-heading text-primary text-size-xl font-semibold">
         Semantic Tags
       </h1>
-      <p className="font-text indent-5 text-justify text-size-lg text-darktext">
+      <p className="font-text indent-5 text-justify xl:text-size-lg text-size-md text-darktext">
         This is how your page (body section) should be organized for better SEO
         (Search Engine Optimization), accessibility and structure.
       </p>

@@ -1,17 +1,17 @@
 export default function PageOne() {
   return (
     <article className="max-w-132 flex flex-col gap-sm lg:backdrop-blur-sm bg-page xl:bg-transparent justify-center items-center xl:p-0 p-md rounded-md">
-      <h1 className="font-heading font-semibold text-primary text-size-xl">
+      <h1 className="font-heading font-semibold text-primary xl:text-size-xl text-size-md">
         HyperText Markup Language
       </h1>
-      <p className="font-text indent-5 text-justify text-size-lg text-darktext">
+      <p className="font-text indent-5 text-justify xl:text-size-lg text-size-md text-darktext">
         This is the standard language used to create and structure content on
         the web. It defines the basic building blocks of a webpage, such as
         headings, paragraphs, links, images, and sections. A basic HTML5
         document structure:
       </p>
       <span>
-        <code className="font-text text-size-lg text-primary">
+        <code className="font-text xl:text-size-lg text-size-md text-primary">
           &lt;!DOCTYPE html&gt; <br />
           &lt;html lang="en"&gt; <br />
           &lt;head&gt; <br />

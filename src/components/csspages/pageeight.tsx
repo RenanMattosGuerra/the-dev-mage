@@ -13,7 +13,7 @@ export default function PageEight() {
 
   return (
     <article className="flex flex-col justify-center items-center gap-md">
-      <h2 className="font-heading text-size-lg backdrop-blur-md text-lighttext-muted">
+      <h2 className="font-heading text-size-lg text-lighttext-muted">
         Code example
       </h2>
       <article className="flex flex-col justify-center items-center gap-md">

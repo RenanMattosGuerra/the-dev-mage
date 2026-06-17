@@ -41,7 +41,7 @@ export default function LevelTwo() {
       <Aside></Aside>
       <section className="flex flex-col justify-center items-center w-full min-h-dvh">
         <section className="w-full flex justify-evenly items-center flex-1 bg-[url('/images/worldfeatures/bgforestpixel.webp')] bg-cover bg-center bg-no-repeat p-md">
-          <div className="bg-secondary border-2 border-secondary-light h-full backdrop-blur-2xl p-md rounded-md w-250 flex justify-center items-center">
+          <div className="bg-secondary border-2 border-secondary-light h-full p-md rounded-md flex justify-center items-center">
             {pages[currentPage]}
           </div>
         </section>

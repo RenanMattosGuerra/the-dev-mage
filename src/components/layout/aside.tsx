@@ -81,7 +81,7 @@ export default function Aside() {
           ></Image>
         </figure>
       </article>
-      <nav className="xl:border-t-2 xl:w-full p-md border-border-muted flex flex-col justify-center font-text text-darktext text-size-lg">
+      <nav className="xl:border-t-2 xl:w-full p-md border-border-muted flex flex-col justify-center font-text text-darktext text-size-md xl:text-size-lg">
         <Link
           href="/start"
           className="border-b-2 border-transparent hover:border-border transition-all duration-200"

@@ -7,7 +7,7 @@ export default function PageFive() {
   const { completeLevel } = useProgress();
 
   function handleCompleteLevel() {
-    completeLevel(1); 
+    completeLevel(1);
     router.push("/start");
   }
 
