@@ -67,7 +67,7 @@ export default function Aside() {
           <h2 className="font-heading text-size-lg xl:text-size-xl text-darktext font-semibold">
             {name}
           </h2>
-          <p className="font-text text-size-md xl:text-size-lg text-darktext-muted">
+          <p className="font-text text-size-sm xl:text-size-lg text-darktext-muted">
             {config.label}
           </p>
         </section>
@@ -81,7 +81,7 @@ export default function Aside() {
           ></Image>
         </figure>
       </article>
-      <nav className="xl:border-t-2 xl:w-full p-md border-border-muted flex flex-col justify-center font-text text-darktext text-size-md xl:text-size-lg">
+      <nav className="xl:border-t-2 xl:w-full p-md border-border-muted flex flex-col justify-center font-text text-darktext text-size-sm xl:text-size-lg">
         <Link
           href="/start"
           className="border-b-2 border-transparent hover:border-border transition-all duration-200"

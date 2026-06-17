@@ -50,14 +50,14 @@ export default function LevelTwo() {
           <button
             type="button"
             onClick={prevPage}
-            className="xl:text-size-lg text-size-md text-lighttext bg-darktext px-5 py-1 cursor-pointer transition-all duration-200 hover:bg-darktext-muted hover:scale-95 pointer-events-auto font-heading rounded-md"
+            className="xl:text-size-lg text-size-sm text-lighttext bg-darktext xl:px-5 px-2 py-1 cursor-pointer transition-all duration-200 hover:bg-darktext-muted hover:scale-95 pointer-events-auto font-heading rounded-md"
           >
             &lt; Previous Page
           </button>
           <button
             type="button"
             onClick={nextPage}
-            className="xl:text-size-lg text-size-md text-lighttext bg-darktext px-5 py-1 cursor-pointer transition-all duration-200 hover:bg-darktext-muted hover:scale-95 pointer-events-auto font-heading rounded-md"
+            className="xl:text-size-lg text-size-sm text-lighttext bg-darktext xl:px-5 px-2 py-1 cursor-pointer transition-all duration-200 hover:bg-darktext-muted hover:scale-95 pointer-events-auto font-heading rounded-md"
           >
             Next Page &gt;
           </button>

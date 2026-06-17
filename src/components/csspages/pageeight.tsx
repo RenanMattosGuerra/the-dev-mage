@@ -12,7 +12,7 @@ export default function PageEight() {
   }
 
   return (
-    <article className="flex flex-col justify-center items-center gap-md">
+    <article className="flex flex-col justify-center items-center gap-md w-full">
       <h2 className="font-heading text-size-lg text-lighttext-muted">
         Code example
       </h2>
@@ -72,7 +72,7 @@ export default function PageEight() {
             &#125;
           </section>
         </code>
-        <section className="flex flex-col xl:flex-row justify-between items-center w-full">
+        <section className="flex flex-col xl:flex-row justify-between items-center xl:items-end w-full">
           <section className="flex justify-around items-center w-100 bg-secondary-light p-2 rounded-md self-center">
             <div className="flex justify-center items-center bg-yellow-200 text-size-md font-text rounded-full w-20 h-20 transition-all duration-200 hover:bg-green-300 border-4 border-white italic">
               <h1>Form One</h1>
